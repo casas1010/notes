@@ -75,10 +75,20 @@ git checkout -b nameOfBranch
 # switch between branches
 git checkout nameOfBranch
 
-# feature branch
+
+# get difference between branches
+- switch to one of the branches you want to compare, the compare with branchName
+git diff branchName
 
 
-
+# merge branch by creating a pull request
+- switch to feature/bug branch
+- branchName: name of branch
+git push --set-upstream origin branchName
+- open the link provided in the terminal
+- resolve comments if any
+- click 'merge pull request'
+- you need to then pull the master branch from github to local
 
 
 
