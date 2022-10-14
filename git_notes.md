@@ -1,3 +1,7 @@
+# location of git key
+/Users/juan/.ssh'
+
+
 
 ## Terms
 Directory: folder
@@ -20,54 +24,58 @@ pull: download changes from remote repo to your local machine
 ls -a
 
 # make a local folder a reposatory
-git init .
+git init
+
+# link github reposatory to local reposatory
+-url: url of github reposatory
+git remote add origin url
 
 # shows all fields created/updated and have not been saved in a commit
 git status
 
-
-# track file 
-git add fileName
-or
+# add all files that have not been tracked in a commit
+git add .
 git add --all
 
+# add specific file that has not been tracked in a commit
+git add fileName
 
-** commits
-- its a save, like a checkpoint save
-git commit -m "someText"
-
-** get status of commit
-git status
+# captures a snapshot of the project's currently staged changes. its a save, like a checkpoint save
+git commit -m "changeTitle" -m "changeDescription"
 
 
+# send code to cloud [1]
+- origin: location of gitreposatory
+- master:
+git push origin master
 
-** send code to cloud
+# send code to cloud [2]
+- requires origin to be set, see # link github reposatory to local reposatory
+git push -u
+
+# send code to cloud
 git push --set-upstream URl BRANCH_NAME
 ex:
 git push --set-upstream https://github.com/casas1010/flutter_firebase_vendor_management main
 
-
-** add tags
+# add tags
 git tag "someText"
 git push --tags
 
-
-** create a branch 
-
-
-
-
-** status of commit
-git status
-
-
-
-
-** config git
+# config git
 git config --global
 
+# show branches and the branch that I am on
+git branch
 
+# create a new branch
+-nameOfBranch: name of the branch, usually starts with feature or bug, then a mini description
+git checkout -b nameOfBranch
 
+# switch between branches
+git checkout nameOfBranch
+
+# feature branch
 
 
 
